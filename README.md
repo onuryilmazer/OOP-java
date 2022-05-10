@@ -1,1 +1,0 @@
-Coding assignments of the "Object Oriented Programming with Java" class.
