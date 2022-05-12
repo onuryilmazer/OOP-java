@@ -46,6 +46,11 @@ public class Week1 {
         System.out.print("Which Fibonacci number do you want?: ");
         i = s.nextInt();
         System.out.println(i + ". Fibonacci number: " + fibonacci(i));
+
+        //Aufgabe 3
+        System.out.print("How many people are there in the party?: ");
+        i = s.nextInt();
+        System.out.print(prost(i));
     }
 
     private static void splitAccordingToIndex(int[] numbers) {
@@ -128,5 +133,17 @@ public class Week1 {
         }
 
         return num3;
+    }
+
+    private static int prost(int n) {
+        if (n<=1) {
+            return 0; //no one to chink with.
+        }
+        else if (n==2) {
+            return 1;
+        }
+        else {
+            return n-1 + prost(n-1);
+        }
     }
 }
