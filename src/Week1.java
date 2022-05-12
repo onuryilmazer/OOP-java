@@ -113,7 +113,7 @@ public class Week1 {
         System.out.println("");
     }
 
-    private static int fibonacci(int n) {
+    public static int fibonacci(int n) {
         if (n<0) {
             System.exit(0);
             return -1;
@@ -135,7 +135,7 @@ public class Week1 {
         return num3;
     }
 
-    private static int prost(int n) {
+    public static int prost(int n) {
         if (n<=1) {
             return 0; //no one to chink with :(
         }
