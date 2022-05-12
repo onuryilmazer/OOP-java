@@ -1,6 +1,6 @@
 /*
 Aufgabe 1:
-a) [1, 2, 17, 4, -1, -2, -3, -4]
+a) [1, 2, 17, 4, -1, -2, -3, -4]  //begründung, falls nötig: "Reference" ist zugewiesen und nicht der Wert.
 b)
 	Teil A:
         Fehler in Zeile: #9, auf a[a.length] kann man nicht zugreifen, "out of bounds".
@@ -137,7 +137,7 @@ public class Week1 {
 
     private static int prost(int n) {
         if (n<=1) {
-            return 0; //no one to chink with.
+            return 0; //no one to chink with :(
         }
         else if (n==2) {
             return 1;
