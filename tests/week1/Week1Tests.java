@@ -1,8 +1,9 @@
+package week1;
+
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import static org.testng.AssertJUnit.assertEquals;
-
 
 public class Week1Tests {
     @Test

@@ -23,6 +23,7 @@ d) private static void splitAccordingToEvenness(int[] numbers) ----- unten.
 
 */
 
+package week1;
 
 public class Week1 {
     public static void main(String[] args) {
