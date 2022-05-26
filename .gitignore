@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 # Default ignored files
 /shelf/
+<<<<<<<< HEAD:.gitignore
 /out/*
 /.idea/*
+========
+/workspace.xml
+/out/*
+>>>>>>>> cabacdfb218e186dadfcaf3764e1a760c9ac55a3:.idea/.gitignore
+=======
+/out/*
+/.idea/*
+>>>>>>> cabacdfb218e186dadfcaf3764e1a760c9ac55a3
