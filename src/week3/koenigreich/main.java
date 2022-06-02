@@ -5,7 +5,7 @@ public class main {
         Einwohner[] einwohner = new Einwohner[20];
 
         einwohner[1] = new Koenig();
-        einwohner[1].setEinkommen(500);  //König zahlt nichts.
+        einwohner[1].setEinkommen(500);  //König zahlt keine Steuern.
 
         einwohner[2] = new Adel();
         einwohner[2].setEinkommen(10);   //Min steuer für Adel: 20 Gulden.
@@ -13,10 +13,10 @@ public class main {
         einwohner[3] = new Adel();
         einwohner[3].setEinkommen(500);
 
-        einwohner[4] = new Leibeigen();
-        einwohner[4].setEinkommen(11);   //Erste 12 Gulden steuerfrei, aber auch wenn Einwohner (außer König) kein versteuerbare Geld haben, ist die Minimumsteuer 1 Gulden.
+        einwohner[4] = new Leibeigener();
+        einwohner[4].setEinkommen(11);   //Erste 12 Gulden sind steuerfrei, aber auch wenn Einwohner (außer König) kein versteuerbares Geld haben, ist die Minimumsteuer 1 Gulden.
 
-        einwohner[5] = new Leibeigen();
+        einwohner[5] = new Leibeigener();
         einwohner[5].setEinkommen(110);  //Erste 12 Gulden sind steuerfrei.
 
         einwohner[6] = new Bauer();

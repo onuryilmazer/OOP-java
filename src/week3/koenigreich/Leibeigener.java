@@ -1,6 +1,6 @@
 package week3.koenigreich;
 
-public class Leibeigen extends Bauer {
+public class Leibeigener extends Bauer {
 
     @Override
     int zuVersteuerndesEinkommen() {

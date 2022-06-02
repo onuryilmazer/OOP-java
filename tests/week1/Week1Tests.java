@@ -1,13 +1,10 @@
 package week1;
 
 import org.junit.Test;
-import org.junit.jupiter.api.DisplayName;
-
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Week1Tests {
     @Test
-    @DisplayName("Function should output correct values: ")
     public void testFibonacci() {
         assertEquals(0, Week1.fibonacci(0));
         assertEquals(1, Week1.fibonacci(1));
@@ -18,7 +15,6 @@ public class Week1Tests {
     }
 
     @Test
-    @DisplayName("Function should output correct values: ")
     public void testProst() {
         assertEquals(0, Week1.prost(0));
         assertEquals(0, Week1.prost(1));
