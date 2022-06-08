@@ -53,10 +53,10 @@ public class Auto {
     public void fahre(int kilometer) {
         if (kilometer > 0) {
             kilometerstand += kilometer;
-            System.out.println("Das Auto hat eine Strecke von " + kilometer + " km. zurückgelegt.");
+            System.out.println("Das Auto hat eine Strecke von " + kilometer + " km. zurueckgelegt.");
         }
         else {
-            System.out.println("Ungültige Kilometereingabe.");
+            System.out.println("Ungueltige Kilometereingabe.");
         }
     }
 

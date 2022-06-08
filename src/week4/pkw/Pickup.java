@@ -15,7 +15,7 @@ public class Pickup extends Auto {
             this.fassungsVermoegen = fassungsVermoegen;
         }
         else {
-            System.out.println("Fehlerhafte Eingabe: Fassungsvermögen kann nicht kleiner als 0 sein.");
+            System.out.println("Fehlerhafte Eingabe: Fassungsvermoegen kann nicht kleiner als 0 sein.");
             this.fassungsVermoegen = 0;
         }
         ladung=0;
@@ -31,14 +31,14 @@ public class Pickup extends Auto {
             return false;
         }
 
-        int freieKapazitaet = fassungsVermoegen - ladung;
+        int freieKapazitaet = fassungsVermoegen - this.ladung;
         if (ladung > freieKapazitaet) {
-            System.out.println("Unzureichende Lagerfläche.");
+            System.out.println("Unzureichende Lagerflaeche.");
             return false;
         }
 
         this.ladung += ladung;
-        System.out.println("Der Pick-up wurde mit " + ladung +  "beladen.");
+        System.out.println("Der Pick-up wurde mit " + ladung +  " Einheiten beladen.");
         return true;
     }
 
@@ -49,12 +49,12 @@ public class Pickup extends Auto {
         }
 
         if (ladung > this.ladung) {
-            System.out.println("Fehlerhafte Eingabe: Argument Ladung kann nicht höher als der aktuelle Inhalt der Ladefläche sein.");
+            System.out.println("Fehlerhafte Eingabe: Argument Ladung kann nicht hoeher als der aktuelle Inhalt der Ladeflaeche sein.");
             return;
         }
 
         this.ladung -= ladung;
-        System.out.println("Inhalt der Ladefläche wurde um "+ladung+" verringert.");
+        System.out.println("Inhalt der Ladeflaeche wurde um " + ladung + " verringert.");
     }
 
     public void entladen() {
@@ -71,6 +71,7 @@ public class Pickup extends Auto {
     public String toString() {
         return "Pickup{" +
                 "fassungsVermoegen=" + fassungsVermoegen +
+                ", aktuelle Inhalt der Ladeflaeche=" + ladung +
                 ", kennzeichen=" + getKennzeichen() +
                 ", kilometerstand=" + getKilometerstand() +
                 ", sitzplaetzen=" + getSitzplaetzen() +
