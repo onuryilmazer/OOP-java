@@ -1,3 +1,5 @@
+//disclaimer: Test cases shamelessly stolen from D***** M. on Discord (name redacted for privacy)
+
 package week3.koenigreich;
 
 import org.junit.Test;
