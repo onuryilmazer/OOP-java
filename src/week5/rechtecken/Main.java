@@ -36,5 +36,20 @@ public class Main {
         rectangles[7].move(10,20);
         rectangles[7].printCoordinates();
 
+        System.out.println("------------------------------");
+        try {
+            rectangles[0].increase(0.1);
+        }
+        catch (IllegalArgumentException e) {
+            System.out.println(e.toString());
+        }
+
+        try {
+            rectangles[0].decrease(0.1);
+        }
+        catch (IllegalArgumentException e) {
+            System.out.println(e.toString());
+        }
+
     }
 }

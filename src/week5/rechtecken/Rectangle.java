@@ -4,7 +4,7 @@ public class Rectangle extends Figure implements IMobileObject {
     protected double width;
     protected double height;
 
-    public enum RelativePosition {SAME, CONTAINED, CONTAINS, DISJOINT, ALIGNED, OVERLAPPING, UNDEFINED};  //static by default.
+    public enum RelativePosition {SAME, CONTAINED, CONTAINS, DISJOINT, ALIGNED, OVERLAPPING};  //enums static by default.
 
     public Rectangle() {
         super(); //redundant, as the compiler implicitly calls the default constructor of the base class.
@@ -47,8 +47,7 @@ public class Rectangle extends Figure implements IMobileObject {
 
     public void increase(double scalingFactor) {
         if (scalingFactor<1) {
-            System.out.println("Stretching the size by a factor smaller than 1 isn't supported. You may use the decrease method for this behavior.");
-            return;
+            throw new IllegalArgumentException("Stretching the size by a factor smaller than 1 isn't supported. You may use the decrease method for this behavior.");
         }
 
         double newWidth = getWidth() * scalingFactor;
@@ -60,8 +59,7 @@ public class Rectangle extends Figure implements IMobileObject {
 
     public void decrease(double scalingFactor) {
         if (scalingFactor<1) {
-            System.out.println("Shrinking the size by a factor smaller than 1 isn't supported. You may use the increase method for this behavior.");
-            return;
+            throw new IllegalArgumentException("Shrinking the size by a factor smaller than 1 isn't supported. You may use the increase method for this behavior.");
         }
 
         double newWidth = getWidth() / scalingFactor;
@@ -86,10 +84,10 @@ public class Rectangle extends Figure implements IMobileObject {
             System.out.println(RelativePosition.SAME.name());
             return RelativePosition.SAME;
         }
-        else if (thisLeft >= otherLeft && thisBottom >= otherBottom && thisRight <= otherRight && thisTop <= otherTop) {  //case where all values are equal is covered above
+        else if (thisLeft >= otherLeft && thisBottom >= otherBottom && thisRight <= otherRight && thisTop <= otherTop) {  //case in which all values are equal is covered above
             return RelativePosition.CONTAINED;
         }
-        else if (otherLeft >= thisLeft && otherBottom >= thisBottom && otherRight <= thisRight && otherTop <= thisTop) {  //case where all values are equal is covered above
+        else if (otherLeft >= thisLeft && otherBottom >= thisBottom && otherRight <= thisRight && otherTop <= thisTop) {  //case in which all values are equal is covered above
             return RelativePosition.CONTAINS;
         }
         else if (thisLeft > otherRight || thisRight < otherLeft || thisBottom > otherTop || thisTop < otherBottom) {  //only remaining possibilities: aligned or overlapping.
