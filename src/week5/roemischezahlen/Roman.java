@@ -66,7 +66,7 @@ public class Roman {
 
         Roman romanType = (Roman) obj;
 
-        if (this.decimalValue == romanType.decimalValue && this.romanNumeral == romanType.romanNumeral) {
+        if (this.decimalValue == romanType.decimalValue && this.romanNumeral.equals(romanType.romanNumeral)) {
             return true;
         }
         else {
